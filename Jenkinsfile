@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("smrutimandal/jenkinstest)
+        app = docker.build("smrutimandal/jenkinstest")
     }
 
     stage('Test image') {
