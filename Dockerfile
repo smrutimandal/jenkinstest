@@ -11,3 +11,10 @@ HEALTHCHECK --interval=5s \
 
 # tell docker what port to expose
 EXPOSE 8000
+
+RUN mkdir /usr/src/app/
+WORKDIR /usr/src/app
+COPY / /usr/src/app
+WORKDIR /usr/src/app
+RUN npm install --production
+CMD ["npm","start"]
